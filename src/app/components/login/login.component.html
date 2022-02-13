@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row " >
+    <div class="form-floating mb-3"  >
+      <input #btn1
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="UserName"
+      />
+      <label for="floatingInput" id="name">UserName</label>
+    </div>
+    <div class="form-floating">
+      <input #btn2
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+      />
+      <label for="floatingPassword" id="password" #btn2>Password</label>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col md-6" >
+          <button type="button"
+           class="btn btn-primary" (click)="btnClick()">Giriş Yap</button>
+        </div>
+        <div class="col md-6">
+          <button
+            type="button"
+            routerLink="/register"
+            routerLinkActive="active"
+            class="btn btn-success"
+          >
+            Müşteriyim
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
