@@ -27,5 +27,7 @@ export class LoginComponent implements OnInit {
       alert('Hatalı Giriş');
     }
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 }

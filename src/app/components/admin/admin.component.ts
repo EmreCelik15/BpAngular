@@ -13,11 +13,12 @@ export class AdminComponent implements OnInit {
   constructor(private bupaService: BupaService) {}
   datas = {};
   dataList: orderDetail[] = [];
-  dataResponseModel:orderDetailResponseModel={
-    data:this.dataList,
-    message:'',
-    success:true
-  }
+  dataResponseModel: orderDetailResponseModel = {
+    data: this.dataList,
+    message: '',
+    success: true,
+  };
+  dataLoaded: boolean = false;
 
   ngOnInit() {
     this.getAllBupas();
@@ -26,11 +27,15 @@ export class AdminComponent implements OnInit {
   getAllBupas() {
     this.bupaService.getAllByAll().subscribe(
       (response) => {
-        this.dataResponseModel=response
+        console.log("ssss")
+        this.dataResponseModel = response;
+        this.dataLoaded = true;
+        console.log(response);
       },
       (error) => {
         console.log(error);
       }
     );
+
   }
 }

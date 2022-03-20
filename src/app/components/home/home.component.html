@@ -1,95 +1,113 @@
-<form class="row g-3 needs-validation" novalidate>
-  <div  class="col-md-4">
-    <label for="validationCustom01" class="form-label">Adınız</label>
-    <input
-      type="text"
-      class="form-control"
-      id="validationCustom01"
-      value=""
-      required
-    />
-    <div class="valid-feedback">Looks good!</div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Soyadınız</label>
-    <input
-      type="text"
-      class="form-control"
-      id="validationCustom02"
-      value=""
-      required
-    />
-    <div class="valid-feedback">Looks good!</div>
-  </div>
-
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Ürün Adı</label>
-    <input
-      type="text"
-      class="form-control"
-      id="validationCustom02"
-      value=""
-      required
-    />
-    <div class="valid-feedback"></div>
-  </div>
-
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Fiyat</label>
-    <input
-      type="text"
-      class="form-control"
-      id="validationCustom02"
-      value=""
-      required
-    />
-      <div class="valid-feedback">Looks good!</div>
-  </div>
-
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Taksit Seçeneği</label>
-    <input
-      type="text"
-      class="form-control"
-      id="validationCustom02"
-      value=""
-      required
-    />
-      <div class="valid-feedback">Looks good!</div>
-  </div>
-
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Ödeme Türü </label>
-    <input
-      type="text"
-      class="form-control"
-      id="validationCustom02"
-      value=""
-      required
-    />
-      <div class="valid-feedback">Looks good!</div>
-  </div>
-
-
-
-
-
-  <div class="col-12">
-    <div class="form-check">
+<div class="container" >
+  <form class="row g-3 needs-validation"  novalidate [formGroup]= "productAddForm">
+    <div class="col-md-4">
+      <label for="firstName" class="form-label">Adınız</label>
       <input
-        class="form-check-input"
-        type="checkbox"
+        type="text"
+        class="form-control"
+        id="firstName"
         value=""
-        id="invalidCheck"
         required
+        formControlName="firstName"
       />
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">You must agree before submitting.</div>
+      <div class="valid-feedback">Looks good!</div>
     </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </div>
-</form>
+    <div class="col-md-4">
+      <label for="lastName" class="form-label">Soyadınız</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        value=""
+        required
+        formControlName="lastName"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="description" class="form-label">Açıklama</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        value=""
+        required
+        formControlName="description"
+      />
+      <div class="valid-feedback"></div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="name" class="form-label">Ürün Adı</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        value=""
+        required
+        formControlName="name"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="installment" class="form-label">Taksit Seçeneği</label>
+      <input
+        type="text"
+        class="form-control"
+        id="installment"
+        value=""
+        required
+        formControlName="installment"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="orderName" class="form-label">Sipariş Adı </label>
+      <input
+        type="text"
+        class="form-control"
+        id="orderName"
+        value=""
+        required
+        formControlName="orderName"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="price" class="form-label">Fiyatı </label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        value=""
+        required
+        formControlName="price"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+
+    <div class="col-12">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="invalidCheck"
+          required
+        />
+        <label class="form-check-label" for="invalidCheck">
+          Gizlilik sözleşmesini kabul ediyorum.
+        </label>
+        <div class="invalid-feedback">You must agree before submitting.</div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" (click)="addBupas()">Gönder</button>
+    </div>
+  </form>
+</div>
